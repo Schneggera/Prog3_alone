@@ -1,0 +1,23 @@
+main:
+
+cities = ["München", "Augsburg", "Hamburg", "Berlin", "London", "New York"]
+lengthOfArray = cities.length()
+distance[][]
+startCity = München
+enddist= unendlich
+shortestCompleteDistance=Integer.Max
+shortestTravel =salesmanRecursive(cities,startCity)
+print(enddist)
+
+
+salesmanRecursive(citiesToDo[], City)
+for (int i =0, i< citiesToDo.length;i++)
+ if (citiesToDo.length!=1)
+   nextCities=citiesToDo.copy().remove(i)
+   return dist += salesmanRecursive(nextCities,nextCities[0])
+ else
+   return distance[actCity][startCity]
+   
+ if (dist<enddist)
+	enddist = dist
+

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{ae62620f-2fb0-4edd-adb7-169cf6c177ad}</ProjectGuid>
+    <ProjectHome />
+    <StartupFile />
+    <SearchPath />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <LaunchProvider>Standard Python launcher</LaunchProvider>
+    <InterpreterId />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <PropertyGroup>
+    <VisualStudioVersion Condition=" '$(VisualStudioVersion)' == '' ">10.0</VisualStudioVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Vokalbeltrainer\main.py" />
+    <Compile Include="Vokalbeltrainer\trainer.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Vokalbeltrainer\.spyproject\codestyle.ini" />
+    <Content Include="Vokalbeltrainer\.spyproject\encoding.ini" />
+    <Content Include="Vokalbeltrainer\.spyproject\vcs.ini" />
+    <Content Include="Vokalbeltrainer\.spyproject\workspace.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Vokalbeltrainer" />
+    <Folder Include="Vokalbeltrainer\.spyproject" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
+</Project>

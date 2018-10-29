@@ -1,0 +1,86 @@
+Metadata-Version: 1.1
+Name: package-example
+Version: 0.0.1
+Summary: A very simple setup.py file
+Home-page: http://myUrl.com
+Author: Name Name
+Author-email: NameName@gmail.com
+License: GPL
+Description: html-Documentation:
+            create doc directory and change into
+            	mkdir doc
+        	cd doc
+            Set up sphinx.
+            Make sure that makefiles are created and the autodoc extension
+            is included. It is assumed that you name the documenation root
+            path as 'doc'. Command:
+                sphinx-quickstart
+        
+            Change to the doc directory.
+        
+            Edit doc/conf.py so that the package you want to document can
+            be imported. For our example insert the line
+                sys.path.insert(0, os.path.abspath('../../package_example'))
+            add sphinx.ext.napoleon to the extensoins list. If the sphinx
+            version is 1.2 or below, use sphinxcontrib.napoleon
+        
+            make sure os and sys are imported
+            
+            change to parent directory
+            cd ..
+            tell sphinx which package to process
+                sphinx-apidoc -o doc my_package
+        
+            back to the doc directory
+                cd doc
+            create html documentation by typing
+                make html 
+        
+        Automatically perform unit tests and doctests:
+            pytest --doctest-modules
+        
+        --------------------------------------------------------------------------------
+        
+        html-Dokumentation:
+            Erzeugen Sie ein Verzeichnis doc und wechseln Sie in dieses Verzeichnis
+        	mkdir doc
+                cd doc
+        
+            Sphinx-Initialisierung.
+        
+            Stellen Sie sicher, dass Makefiles generiert werden und dass die
+            autodoc-Erweiterung eingebunden ist. Nennen Sie das Basisverzeichnis
+            für die Dokumentation 'doc'. Befehl:
+                sphinx-quickstart
+        
+            Wechseln Sie ins Verzeichnis 'doc'.
+        
+            Editieren Sie die Datei conf.py, so dass das zu dokumentierende
+            Paket importiert werden kann. In unserem Fall muss folgende Zeile
+            eingefügt werden:
+                sys.path.insert(0, os.path.abspath('../../package_example'))
+            Fügen Sie sphinx.ext.napoleon in die Liste der Erweiterungen ein.
+            Falls Sphinx-Version 1.2 oder niedriger verwendet wird, nutzen Sie
+            sphinxcontrib.napoleon statt sphinx.ext.napoleon.
+        
+            Sorgen Sie dafuer, dass os und sys importiert werden
+            
+            wechseln Sie ein Verzeichnis höher
+            cd ..
+            Nutzen Sie sphinx-apidoc, um die zu dokumentierenden Pakete
+            zu spezifizieren:
+                sphinx-apidoc -o doc my_package
+        
+            Zurück ins doc-Verzeichnis
+                cd doc
+            Erzeugung der HTML-Dokumentation:
+                make html 
+        
+        Automatische Durchfuehrung der Unittests und Doctests:
+            pytest --doctest-modules
+        
+Keywords: example documentation tests tutorial
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Demonstration
+Classifier: License :: GPL License

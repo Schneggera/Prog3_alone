@@ -1,0 +1,15 @@
+README
+setup.py
+my_package/__init__.py
+my_package/generatoren.py
+my_package/manipulatoren.py
+my_package/verdopplung.py
+package_example.egg-info/PKG-INFO
+package_example.egg-info/SOURCES.txt
+package_example.egg-info/dependency_links.txt
+package_example.egg-info/top_level.txt
+test_my_package/__init__.py
+test_my_package/test_generatoren.py
+test_my_package/test_manipulatoren.py
+tutorials/__init__.py
+tutorials/manipulatoren_tutorial.py
