@@ -4,37 +4,54 @@ Spyder Editor
 
 This is a temporary script file.
 """
-cities = ["A", "B", "C", "D"]
-cord = [(100, 50), (30, 60), (70, 20), (10, 10)]
-startCity = cities[0]
-permutation = []
+import math
+CORD = {"A": (100, 50), "B": (30, 60), "C": (70, 20), "D": (10, 10)}
+PERMUTATION = []
 
 
-def permutations(citiesPer, curPer):
-    if len(citiesPer) > 1:
-        for city in citiesPer:
-           curPer.append(city)
-           citiesTemp = list(citiesPer)
-           citiesTemp.remove(city)
-           perhigher = curPer[:]
-           permutations(citiesTemp, curPer)
-           curPer = perhigher[:-1]           
-        return
+def permutations(cities_per, cur_per):
+    '''ermittelt alle Permutationen'''
+    if len(cities_per) > 1:
+        for city in cities_per:
+            cur_per.append(city)
+            cities_temp = list(cities_per)
+            cities_temp.remove(city)
+            perhigher = cur_per[:]
+            permutations(cities_temp, cur_per)
+            cur_per = perhigher[:-1]
     else:
-        curPer.append(citiesPer[-1])
-        curPer.append(startCity)
-        lista = ['A']+curPer
-        permutation.append(lista)
+        cur_per.append(cities_per[-1])
+        cur_per.append(STARTCITY)
+        lista = ['A']+cur_per
+        PERMUTATION.append(lista)
         return
+
 
 def calc_shortest():
-    for per in permutation:
-        for city in permutation:
+    '''berechnet den kuerzesten weg unter allen Permutationen'''
+    cur_dist = 0
+    dist = 9999999999
+    for per in PERMUTATION:
+        for city in per:
+            if per.index(city) == len(per):
+                continue
+            else:
+                cur_dist += calc_dist(city, per[per.index(city) + 1])
+        if cur_dist < dist:
+            dist = cur_dist
+    return dist
 
 
+def calc_dist(city, next_city) -> int:
+    '''berchnet den kuerzsten Weg zwischen zwei Punkten'''
+    return math.sqrt(((CORD[city][0]-CORD[next_city][0]) *
+                      (CORD[city][0]-CORD[next_city][0])) +
+                     ((CORD[city][1]-CORD[next_city][1]) *
+                      (CORD[city][1]-CORD[next_city][1])))
 
 
-
-cities.remove(startCity)
-permutations(cities, curPer=[])
-print(permutation)
+CITIES = list(CORD.keys())
+STARTCITY = CITIES[0]
+CITIES.remove(STARTCITY)
+permutations(CITIES, cur_per=[])
+print(calc_shortest())
