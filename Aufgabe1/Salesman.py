@@ -5,7 +5,7 @@ Spyder Editor
 This is a temporary script file.
 """
 import math
-CORD = {"A": (100, 50), "B": (30, 60), "C": (70, 20), "D": (10, 10)}
+CORD = {"A": (1, 1), "B": (2, 2), "C": (3, 3)}
 PERMUTATION = []
 
 
@@ -19,6 +19,7 @@ def permutations(cities_per, cur_per):
             perhigher = cur_per[:]
             permutations(cities_temp, cur_per)
             cur_per = perhigher[:-1]
+        return
     else:
         cur_per.append(cities_per[-1])
         cur_per.append(STARTCITY)
@@ -38,12 +39,13 @@ def calc_shortest():
             else:
                 cur_dist += calc_dist(city, per[per.index(city) + 1])
         if cur_dist < dist:
+            shortest_per = per
             dist = cur_dist
-    return dist
+    return dist, per
 
 
 def calc_dist(city, next_city) -> int:
-    '''berchnet den kuerzsten Weg zwischen zwei Punkten'''
+    '''berechnet den kuerzsten Weg zwischen zwei Punkten'''
     return math.sqrt(((CORD[city][0]-CORD[next_city][0]) *
                       (CORD[city][0]-CORD[next_city][0])) +
                      ((CORD[city][1]-CORD[next_city][1]) *
