@@ -3,9 +3,11 @@
     "",
     "\\Aufgabe1",
     "\\Aufgabe1\\MonteCarlo",
+    "\\Aufgabe1\\MonteCarlo\\PythonApplication1",
+    "\\Aufgabe1\\MonteCarlo\\PythonApplication1\\PythonApplication1",
     "\\Aufgabe2",
     "\\Aufgabe2\\Aufgabe2_Vokabeltrainer"
   ],
-  "SelectedNode": "\\Aufgabe1\\MonteCarlo",
+  "SelectedNode": "\\Aufgabe2\\Aufgabe2_Vokabeltrainer\\Aufgabe2_Vokabeltrainer.pyproj",
   "PreviewInSolutionExplorer": false
 }

@@ -5,7 +5,7 @@ import random
 def monte_carlo():
     '''berechnet Pi'''
     hits = i = 0
-    run = 9999999
+    run = 10000000
     while i < run:
         x = random.random()
         y = random.random()
