@@ -5,6 +5,8 @@ Spyder Editor
 This is a temporary script file.
 """
 import math
+import numpy as np
+import matplotlib.pyplot as plt
 CORD = {"A": (0.010319427306382911, 0.8956251389386756), "B": (0.6999898714299346, 0.42254500074835377), "C": (0.4294574582950912, 0.4568408794115657), "D": (0.6005454852683483, 0.9295407203370832), "E": (0.9590226056623925, 0.581453646599427), "F": (0.748521134122647, 0.5437775417153159), "G": (0.7571232013282426, 0.606435031856663), "H": (0.07528757443413125, 0.07854082131763074), "I": (0.32346175150639334, 0.7291706487873425)}
 PERMUTATION = []
 
@@ -48,9 +50,24 @@ def calc_dist(city, next_city) -> int:
                      ((CORD[city][1]-CORD[next_city][1]) *
                       (CORD[city][1]-CORD[next_city][1])))
 
+def pfad_ausgabe(path):
+    pointArray = np.array(path)
+    plt.plot(pointArray[0,0], pointArray[0,1], 'ro')
+    plt.plot(pointArray[1:-1,0], pointArray[1:-1,1], 'bo')
+    plt.plot(pointArray[:,0], pointArray[:,1], '-k')
+    plt.yticks(())
+    plt.xticks(())
+    plt.show()
+
+def shortest_to_list(shortest):
+    a = []
+    for city in shortest:
+        a.append(CORD.get(city))
+    return a
 
 CITIES = list(CORD.keys())
 STARTCITY = CITIES[0]
 CITIES.remove(STARTCITY)
 permutations(CITIES, cur_per=[])
+pfad_ausgabe(shortest_to_list(calc_shortest()[1]))
 print(calc_shortest())
