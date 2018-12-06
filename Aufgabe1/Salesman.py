@@ -44,14 +44,14 @@ def permutations(cities_per, cur_per):
 
 def calc_shortest():
     '''berechnet den kuerzesten weg unter allen Permutationen'''
-    dist = 9999999999
+    dist = float.inf
     for per in PERMUTATION:
         cur_dist = 0
         for city in range(len(per) -1):
                 cur_dist += calc_dist(per[city], per[city + 1])
         if cur_dist < dist:
             shortest_per = per
-            dist = cur_dist            
+            dist = cur_dist
     return dist, shortest_per
 
 

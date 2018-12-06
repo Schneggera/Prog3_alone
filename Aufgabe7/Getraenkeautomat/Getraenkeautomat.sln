@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "Getraenkeautomat", "Getraenkeautomat\Getraenkeautomat.pyproj", "{F64F6ECD-030A-477E-84A5-DEBE0AB452B1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F64F6ECD-030A-477E-84A5-DEBE0AB452B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F64F6ECD-030A-477E-84A5-DEBE0AB452B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BDAC9C56-CF57-46D9-86BB-0D974A8BE543}
+	EndGlobalSection
+EndGlobal
