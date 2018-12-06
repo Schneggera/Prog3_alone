@@ -1,3 +1,4 @@
+
 class getr():
     COINS = ['50Cent', '1Cent', '2Cent', '5Cent','10Cent', '20Cent', '1Euro', '2Euro', 'beenden']
     DRINKS = ['Limonade', 'Mineralwasser', 'beenden']
@@ -7,16 +8,6 @@ class getr():
         self.used = False
 
     def eingabe(self, inp):
-        """
-            >>> from Getraenkeautomat import getr
-            >>> g = getr()
-            >>> g.zustandsAusgabe()
-            'Zustand: Anfang Befehle: [50Cent, 1Cent, 2Cent, 5Cent, 10Cent, 20Cent, 1Euro, 2Euro, beenden]'
-            >>> g.eingabe('50Cent')
-            'Ausgabe: Bitte waehlen'
-            >>> g.zustandsAusgabe()
-            'Zustand: Auswahl Befehle: [Limonade, Mineralwasser, beenden]'
-        """
         if inp in self.COINS and self.zustand == "Anfang":
             self.zustand = "Auswahl"
             if self.used == True:
@@ -34,7 +25,7 @@ class getr():
             if self.used == True:
                 print("Ausgabe: eingabeSpeichern")
             else:
-                return "Ausgabe: Bitte waehlen"
+                return "Ausgabe: eingabeSpeichern"
 
     def zustandsAusgabe(self):
         if self.zustand == "Anfang":
@@ -58,9 +49,6 @@ class getr():
         elif self.used == True:
             self.used = False
 
-if __name__ == "__main__":
-    import doctest
-    doctest.testmod(verbose=True)
 
 
 import unittest
@@ -72,7 +60,5 @@ class getrTest(unittest.TestCase):
     def test_eingabe(self):
         self.g.zustandsAusgabe()
         self.assertEqual(self.g.zustandsAusgabe(), 'Zustand: Anfang Befehle: [50Cent, 1Cent, 2Cent, 5Cent, 10Cent, 20Cent, 1Euro, 2Euro, beenden]')
-        self.g.eingabe('50Cent')
         self.assertEqual(self.g.eingabe('50Cent'), 'Ausgabe: Bitte waehlen')
-        self.g.zustandsAusgabe()
         self.assertEqual(self.g.zustandsAusgabe(), 'Zustand: Auswahl Befehle: [Limonade, Mineralwasser, beenden]')
