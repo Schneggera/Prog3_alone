@@ -6,8 +6,11 @@
     "\\Aufgabe1\\MonteCarlo\\PythonApplication1",
     "\\Aufgabe1\\MonteCarlo\\PythonApplication1\\PythonApplication1",
     "\\Aufgabe2",
-    "\\Aufgabe2\\Aufgabe2_Vokabeltrainer"
+    "\\Aufgabe2\\Aufgabe2_Vokabeltrainer",
+    "\\Aufgabe9",
+    "\\Aufgabe9\\MonteCarloParallel",
+    "\\Aufgabe9\\MonteCarloParallel\\MonteCarloParallel"
   ],
-  "SelectedNode": "\\Aufgabe1\\Salesman.py",
+  "SelectedNode": "\\Aufgabe9\\MonteCarloParallel\\MonteCarloParallel\\MonteCarloQueue.py",
   "PreviewInSolutionExplorer": false
 }
